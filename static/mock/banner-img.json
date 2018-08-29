@@ -1,0 +1,19 @@
+{
+  "imgs":[
+    {
+      "id": "banner1",
+      "path": "/static/img/banner1.jpg",
+      "title": "banner"
+    },
+    {
+      "id": "banner2",
+      "path": "/static/img/banner2.jpg",
+      "title": "banner"
+    },
+    {
+      "id": "banner3",
+      "path": "/static/img/banner3.jpg",
+      "title": "banner"
+    }
+  ]
+}

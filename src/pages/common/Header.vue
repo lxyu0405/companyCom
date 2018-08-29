@@ -44,40 +44,23 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'MainHeader',
   data () {
     return {
       activeIndex: '0',
       name: '0',
-      menus: [
-        {
-          id: 'nav1',
-          label: '首页',
-          path: '/'
-        },
-        {
-          id: 'nav2',
-          label: '公司概况',
-          path: '/second'
-        },
-        {
-          id: 'nav3',
-          label: '产品与服务',
-          path: '/'
-        },
-        {
-          id: 'nav4',
-          label: '企业文化',
-          path: '/'
-        },
-        {
-          id: 'nav5',
-          label: '联系我们',
-          path: '/'
-        }
-      ]
+      menus: []
     }
+  },
+  mounted () {
+    axios.get('./static/mock/navigation.json')
+      .then(res => {
+        if (res.data.menus && res.data.menus.length > 0) {
+          this.menus = res.data.menus
+        }
+      })
   },
   methods: {
     handleSelect (val) {
