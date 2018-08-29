@@ -2,12 +2,12 @@
   "imgs":[
     {
       "id": "banner1",
-      "path": "/static/img/banner1.jpg",
+      "path": "/static/img/banner4.jpg",
       "title": "banner"
     },
     {
       "id": "banner2",
-      "path": "/static/img/banner2.jpg",
+      "path": "/static/img/banner5.jpg",
       "title": "banner"
     },
     {

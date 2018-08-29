@@ -1,5 +1,5 @@
 import HomePage from '@/pages/homepage/HomePage'
-import SecondPage from '@/pages/secondpage/Second'
+import CompanyPage from '@/pages/companypage/CompanyPage'
 
 const routes = [
   {
@@ -11,11 +11,11 @@ const routes = [
     }
   },
   {
-    path: '/second',
-    name: 'Second',
-    component: SecondPage,
+    path: '/company',
+    name: 'Company',
+    component: CompanyPage,
     meta: {
-      title: 'This is Second page'
+      title: 'This is Company page'
     }
   }
 ]

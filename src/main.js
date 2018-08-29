@@ -7,6 +7,8 @@ import {
   MenuItem,
   Container,
   Header,
+  Footer,
+  Main,
   Carousel,
   CarouselItem,
   Collapse,
@@ -48,6 +50,8 @@ Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(Container)
 Vue.use(Header)
+Vue.use(Footer)
+Vue.use(Main)
 Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Collapse)

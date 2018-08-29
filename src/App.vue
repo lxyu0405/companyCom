@@ -1,16 +1,30 @@
 <template>
   <div id="app">
-    <main-header/>
+    <main-header :currentPath="currentPath"/>
     <router-view/>
+    <main-footer/>
   </div>
 </template>
 
 <script>
 import MainHeader from '@/pages/common/Header'
+import MainFooter from '@/pages/common/Footer'
 export default {
   name: 'App',
   components: {
-    MainHeader
+    MainHeader,
+    MainFooter
+  },
+  data () {
+    return {
+      currentPath: '/'
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+    if (this.$router.history.current && this.$router.history.current.path) {
+      this.currentPath = this.$router.history.current.path
+    }
   }
 }
 </script>

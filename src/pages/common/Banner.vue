@@ -1,48 +1,31 @@
 <template>
-  <el-carousel id="container" trigger="click" :height="bannerHeight">
-    <el-carousel-item v-for="image in images" :key="image.id">
-      <div
+  <el-container>
+    <div
         class="image"
         :style="{
-          background: 'url(' + image.path + ') no-repeat',
-          backgroundPosition: 'center',
+          background: 'url(' + imgSrc + ') no-repeat',
+          backgroundPosition: 'center 20%',
           backgroundSize: '100%'}"
           >
       </div>
-    </el-carousel-item>
-  </el-carousel>
+  </el-container>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  name: 'MainBanner',
-  data () {
-    return {
-      activeIndex: '1',
-      images: []
-    }
-  },
-  mounted () {
-    axios.get('./static/mock/banner-img.json')
-      .then(res => {
-        if (res.data.imgs && res.data.imgs.length > 0) {
-          this.images = res.data.imgs
-        }
-      })
-  },
-  computed: {
-    bannerHeight () {
-      return window.innerWidth <= 700 ? '15rem' : '25rem'
+  name: 'CommonBanner',
+  props: {
+    imgSrc: {
+      type: String,
+      required: true
     }
   }
-
 }
 </script>
 
 <style scoped>
-#container .image{
+.image {
+  height: 25rem;
   width: 100%;
-  height: 100%;
 }
 </style>

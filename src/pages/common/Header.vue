@@ -1,11 +1,12 @@
 <template>
-  <el-container id="container">
-    <el-header class="hidden-xs-only">
+  <el-container id="header">
+    <el-header class="hidden-xs-only fixed">
       <el-row>
-        <el-col :span="2">
+        <el-col :span="4" class="logo-box">
           <img class="logo" src="@/assets/images/logo.svg" alt="logo">
+          <strong>公司LOGO</strong>
         </el-col>
-        <el-col :span="18" :offset="4">
+        <el-col :span="16" :offset="4">
           <el-menu
             @select="handleSelect"
             :default-active="activeIndex"
@@ -54,11 +55,22 @@ export default {
       menus: []
     }
   },
+  props: {
+    currentPath: {
+      type: String,
+      default: '/'
+    }
+  },
   mounted () {
     axios.get('./static/mock/navigation.json')
       .then(res => {
         if (res.data.menus && res.data.menus.length > 0) {
           this.menus = res.data.menus
+          this.menus.forEach((menu, index) => {
+            if (menu.path === this.currentPath) {
+              this.activeIndex = index.toString()
+            }
+          })
         }
       })
   },
@@ -74,9 +86,15 @@ export default {
 </script>
 
 <style scoped>
-.logo{
+.logo {
   width: 4rem;
   height: 4rem;
+  margin-right: 1rem;
+}
+.logo-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 #mobile-header {
   padding: 0 1rem;
@@ -85,7 +103,7 @@ export default {
   width: 3rem;
   height: 3rem;
 }
-#container .el-menu {
+#header .el-menu {
   border: none;
 }
 #mobile-navbar {
@@ -93,5 +111,12 @@ export default {
 }
 #mobile-navbar i {
   font-size: 1.5rem;
+}
+.fixed {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 15px #666;
 }
 </style>
