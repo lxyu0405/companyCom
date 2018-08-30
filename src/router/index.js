@@ -6,5 +6,11 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: routes
+  routes: routes,
+  scrollBehavior () {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })

@@ -5,6 +5,7 @@ import {
   Col,
   Menu,
   MenuItem,
+  Card,
   Container,
   Header,
   Footer,
@@ -12,7 +13,8 @@ import {
   Carousel,
   CarouselItem,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Pagination
 } from 'element-ui'
 import '@/assets/styles/normalize.css'
 import 'element-ui/lib/theme-chalk/display.css'
@@ -23,7 +25,6 @@ import router from './router'
 Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
-  // SEO优化
   if (to.meta.title) {
     document.title = to.meta.title
   }
@@ -35,6 +36,7 @@ Vue.use(Row)
 Vue.use(Col)
 Vue.use(Menu)
 Vue.use(MenuItem)
+Vue.use(Card)
 Vue.use(Container)
 Vue.use(Header)
 Vue.use(Footer)
@@ -43,6 +45,7 @@ Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Collapse)
 Vue.use(CollapseItem)
+Vue.use(Pagination)
 
 /* eslint-disable no-new */
 new Vue({

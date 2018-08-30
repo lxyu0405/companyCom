@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .image {
-  height: 25rem;
+  height: 20rem;
   width: 100%;
 }
 .image.mobile-image {

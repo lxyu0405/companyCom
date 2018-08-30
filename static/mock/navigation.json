@@ -7,13 +7,13 @@
     },
     {
       "id": "nav2",
-      "label": "公司概况",
+      "label": "企业概况",
       "path": "/company"
     },
     {
       "id": "nav3",
       "label": "产品与服务",
-      "path": "/"
+      "path": "/product"
     },
     {
       "id": "nav4",
