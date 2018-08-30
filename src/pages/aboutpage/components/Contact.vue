@@ -7,7 +7,7 @@
       <p>电话：18999999999</p>
       <p>传真：021-123456</p>
       <div class="img-box">
-        <img src="/static/img/home1.jpg" alt="company-concept">
+        <img src="/static/img/map.jpg" alt="company-concept">
       </div>
     </el-main>
   </el-container>

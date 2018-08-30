@@ -27,32 +27,32 @@ export default {
       dataSource: [
         {
           id: 'product1',
-          imgSrc: '/static/img/home-introduce.jpg',
+          imgSrc: '/static/img/stone1.jpg',
           label: '产品名称'
         },
         {
           id: 'product2',
-          imgSrc: '/static/img/home-introduce.jpg',
+          imgSrc: '/static/img/stone2.jpg',
           label: '产品名称'
         },
         {
           id: 'product3',
-          imgSrc: '/static/img/home-introduce.jpg',
+          imgSrc: '/static/img/stone1.jpg',
           label: '产品名称'
         },
         {
           id: 'product4',
-          imgSrc: '/static/img/home-introduce.jpg',
+          imgSrc: '/static/img/stone2.jpg',
           label: '产品名称'
         },
         {
           id: 'product5',
-          imgSrc: '/static/img/home-introduce.jpg',
+          imgSrc: '/static/img/stone1.jpg',
           label: '产品名称'
         },
         {
           id: 'product6',
-          imgSrc: '/static/img/home-introduce.jpg',
+          imgSrc: '/static/img/stone2.jpg',
           label: '产品名称'
         }
       ],
@@ -78,32 +78,32 @@ export default {
         this.dataSource = [
           {
             id: 'product1',
-            imgSrc: '/static/img/home-introduce.jpg',
+            imgSrc: '/static/img/stone1.jpg',
             label: '产品名称'
           },
           {
             id: 'product2',
-            imgSrc: '/static/img/home-introduce.jpg',
+            imgSrc: '/static/img/stone2.jpg',
             label: '产品名称'
           },
           {
             id: 'product3',
-            imgSrc: '/static/img/home-introduce.jpg',
+            imgSrc: '/static/img/stone1.jpg',
             label: '产品名称'
           },
           {
             id: 'product4',
-            imgSrc: '/static/img/home-introduce.jpg',
+            imgSrc: '/static/img/stone2.jpg',
             label: '产品名称'
           },
           {
             id: 'product5',
-            imgSrc: '/static/img/home-introduce.jpg',
+            imgSrc: '/static/img/stone1.jpg',
             label: '产品名称'
           },
           {
             id: 'product6',
-            imgSrc: '/static/img/home-introduce.jpg',
+            imgSrc: '/static/img/stone2.jpg',
             label: '产品名称'
           }
         ]

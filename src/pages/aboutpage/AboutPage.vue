@@ -4,6 +4,7 @@
     <common-main @clickSideMenu="handleSideClick" :title="imgLabel" :menus="sideMenus">
       <div slot="content">
         <contact-us v-if="activeComponentName === 'ContactUs'"></contact-us>
+        <h3 v-else-if="activeComponentName === 'HumanResource'">暂无信息</h3>
       </div>
     </common-main>
   </div>

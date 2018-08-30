@@ -6,7 +6,7 @@ import AboutPage from '@/pages/aboutpage/AboutPage'
 
 const routes = [
   {
-    path: '/',
+    path: '/website',
     name: 'Home',
     component: HomePage,
     meta: {
@@ -14,7 +14,7 @@ const routes = [
     }
   },
   {
-    path: '/company',
+    path: '/website/company',
     name: 'Company',
     component: CompanyPage,
     meta: {
@@ -22,7 +22,7 @@ const routes = [
     }
   },
   {
-    path: '/product',
+    path: '/website/product',
     name: 'Product',
     component: ProductPage,
     meta: {
@@ -30,7 +30,7 @@ const routes = [
     }
   },
   {
-    path: '/alliance',
+    path: '/website/alliance',
     name: 'Alliance',
     component: AlliancePage,
     meta: {
@@ -38,7 +38,7 @@ const routes = [
     }
   },
   {
-    path: '/about',
+    path: '/website/about',
     name: 'AboutUs',
     component: AboutPage,
     meta: {

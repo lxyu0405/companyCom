@@ -2,11 +2,11 @@
   <el-container id="header">
     <el-header class="hidden-xs-only fixed">
       <el-row>
-        <el-col :span="4" class="logo-box">
+        <el-col :span="6" class="logo-box">
           <img class="logo" src="@/assets/images/logo.svg" alt="logo">
           <strong>公司LOGO</strong>
         </el-col>
-        <el-col :span="16" :offset="4">
+        <el-col :span="14" :offset="4">
           <el-menu
             @select="handleSelect"
             :default-active="activeIndex"
