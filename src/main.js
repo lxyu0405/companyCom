@@ -27,20 +27,7 @@ router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title
   }
-  // if (to.meta.keywords || to.meta.description) {
-  //   const metas = document.getElementsByTagName('meta')
-  //   for (let i = 0; i < metas.length; i++) {
-  //     const meta = metas[i]
-  //     if (meta.name) {
-  //       if (meta.name === 'keywords' && to.meta.keywords) {
-  //         meta.content = to.meta.keywords
-  //       }
-  //       if (meta.name === 'description' && to.meta.description) {
-  //         meta.content = to.meta.description
-  //       }
-  //     }
-  //   }
-  // }
+  Vue.prototype.$ISMOBILE = window.innerWidth <= 700
   next()
 })
 

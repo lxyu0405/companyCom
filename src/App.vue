@@ -21,7 +21,6 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll)
     if (this.$router.history.current && this.$router.history.current.path) {
       this.currentPath = this.$router.history.current.path
     }

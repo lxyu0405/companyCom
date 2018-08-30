@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     bannerHeight () {
-      return window.innerWidth <= 700 ? '15rem' : '35rem'
+      return this.$ISMOBILE ? '15rem' : '35rem'
     }
   }
 

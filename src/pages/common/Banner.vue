@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <div
-        class="image"
+        :class="className"
         :style="{
           background: 'url(' + imgSrc + ') no-repeat',
           backgroundPosition: 'center 20%',
@@ -19,6 +19,11 @@ export default {
       type: String,
       required: true
     }
+  },
+  computed: {
+    className () {
+      return this.$ISMOBILE ? 'image mobile-image' : 'image'
+    }
   }
 }
 </script>
@@ -27,5 +32,8 @@ export default {
 .image {
   height: 25rem;
   width: 100%;
+}
+.image.mobile-image {
+  height: 15rem;
 }
 </style>

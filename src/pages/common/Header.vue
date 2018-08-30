@@ -20,12 +20,12 @@
       </el-row>
     </el-header>
     <el-row id="mobile-header" class="hidden-sm-and-up">
-        <el-collapse v-model="name" accordion>
+        <el-collapse v-model="name" accordion @change="handleChange">
           <el-collapse-item name="1">
             <template slot="title">
               <el-row id="mobile-navbar" type="flex" justify="space-between" align="middle">
                 <img class="logo" src="@/assets/images/logo.svg" alt="logo">
-                <i class="el-icon-menu"></i>
+                <i :class="iconClass"></i>
               </el-row>
             </template>
             <el-menu
@@ -52,7 +52,8 @@ export default {
     return {
       activeIndex: '0',
       name: '0',
-      menus: []
+      menus: [],
+      opened: false
     }
   },
   props: {
@@ -74,12 +75,20 @@ export default {
         }
       })
   },
+  computed: {
+    iconClass () {
+      return this.opened ? 'el-icon-menu is-opened' : 'el-icon-menu'
+    }
+  },
   methods: {
     handleSelect (val) {
       this.activeIndex = val
       this.name = '0'
       const path = this.menus[val].path
       this.$router.push(path)
+    },
+    handleChange () {
+      this.opened = !this.opened
     }
   }
 }
@@ -95,6 +104,13 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.el-icon-menu {
+  transition: all .8s;
+  transform: rotate(0deg);
+}
+.el-icon-menu.is-opened {
+  transform: rotate(45deg);
 }
 #mobile-header {
   padding: 0 1rem;
