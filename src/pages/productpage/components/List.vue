@@ -37,6 +37,7 @@ export default {
 }
 .image {
   width: 100%;
+  height: 10rem;
   display: block;
 }
 .el-card p,

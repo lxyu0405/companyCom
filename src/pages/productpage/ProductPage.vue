@@ -3,7 +3,7 @@
     <common-banner :imgSrc="imgPath" :imgLabel="imgLabel"></common-banner>
     <common-main @clickSideMenu="handleSideClick" :title="imgLabel" :menus="sideMenus">
       <div slot="content">
-          <list-page :dataSource="dataSource"></list-page>
+        <list-page :dataSource="dataSource"></list-page>
       </div>
     </common-main>
   </div>

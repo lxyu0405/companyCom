@@ -18,12 +18,12 @@
     {
       "id": "nav4",
       "label": "品牌联盟",
-      "path": "/"
+      "path": "/alliance"
     },
     {
       "id": "nav5",
-      "label": "联系我们",
-      "path": "/"
+      "label": "关于我们",
+      "path": "/about"
     }
   ]
 }

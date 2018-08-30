@@ -1,6 +1,8 @@
 import HomePage from '@/pages/homepage/HomePage'
 import CompanyPage from '@/pages/companypage/CompanyPage'
 import ProductPage from '@/pages/productpage/ProductPage'
+import AlliancePage from '@/pages/alliancepage/AlliancePage'
+import AboutPage from '@/pages/aboutpage/AboutPage'
 
 const routes = [
   {
@@ -25,6 +27,22 @@ const routes = [
     component: ProductPage,
     meta: {
       title: 'This is Product page'
+    }
+  },
+  {
+    path: '/alliance',
+    name: 'Alliance',
+    component: AlliancePage,
+    meta: {
+      title: 'This is Alliance page'
+    }
+  },
+  {
+    path: '/about',
+    name: 'AboutUs',
+    component: AboutPage,
+    meta: {
+      title: 'This is AboutUs page'
     }
   }
 ]
