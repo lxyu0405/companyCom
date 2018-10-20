@@ -79,7 +79,7 @@ export default {
 .el-row {
   width: 100%;
 }
-.side-menu li{
+.side-menu li {
   border-bottom: 1px solid #fff;
 }
 .side-menu-title {

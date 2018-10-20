@@ -20,27 +20,27 @@
       </el-row>
     </el-header>
     <el-row id="mobile-header" class="hidden-sm-and-up">
-        <el-collapse v-model="name" accordion @change="handleChange">
-          <el-collapse-item name="1">
-            <template slot="title">
-              <el-row id="mobile-navbar" type="flex" justify="space-between" align="middle">
-                <img class="logo" src="@/assets/images/logo.svg" alt="logo">
-                <i :class="iconClass"></i>
-              </el-row>
-            </template>
-            <el-menu
-              @select="handleSelect"
-              :default-active="activeIndex"
-              mode="vertical"
-              style="z-index: 99"
-              text-color="#2c3e50">
-              <el-menu-item v-for="(menu, index) in menus" :key="menu.id" :index="index.toString()">
-                {{menu.label}}
-              </el-menu-item>
-            </el-menu>
-          </el-collapse-item>
-        </el-collapse>
-      </el-row>
+      <el-collapse v-model="name" accordion @change="handleChange">
+        <el-collapse-item name="1">
+          <template slot="title">
+            <el-row id="mobile-navbar" type="flex" justify="space-between" align="middle">
+              <img class="logo" src="@/assets/images/logo.svg" alt="logo">
+              <i :class="iconClass"></i>
+            </el-row>
+          </template>
+          <el-menu
+            @select="handleSelect"
+            :default-active="activeIndex"
+            mode="vertical"
+            style="z-index: 99"
+            text-color="#2c3e50">
+            <el-menu-item v-for="(menu, index) in menus" :key="menu.id" :index="index.toString()">
+              {{menu.label}}
+            </el-menu-item>
+          </el-menu>
+        </el-collapse-item>
+      </el-collapse>
+    </el-row>
   </el-container>
 </template>
 
